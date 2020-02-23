@@ -15,18 +15,18 @@ with open(csv_path, newline='', mode= 'r', encoding="utf8") as csvfile:
 Total_Vote= sum(C.values())
 print("Total number of votes cast : ", Total_Vote)
 Sorted_C = sorted(C.items(), key=operator.itemgetter(1),reverse=True)
-print(f"A complete list of candidates who received votes {Sorted_C}")
-
 for count in Sorted_C:
-    print(f" {count[0]} : {round (100*(count[1]/Total_Vote),2 )} % {count[1]}")
-    print(f" {count[0]} : {round (100*(count[1]/Total_Vote),2 )} % {count[1]}")
+    AA= print(f" {count[0]} : {round (100*(count[1]/Total_Vote),2 )} % {count[1]}")
 
-# print(f"#    Houston Mayoral Election Results")
-# print(f"#    --------------------------------")
-# print(f"     Total Cast Votes: {Total_Vote}")
-# print(f"#    --------------------------------")
-# print(f"#    {count[0]} : {round (100*(count[1]/Total_Vote),2 )} % {count[1]}")
+print(f"Total Cast Votes: {Total_Vote}")
 
+
+with open('output.txt', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(["Total Cast Votes", "Sylvester Turner", "Tony Buzbee", "Bill King %", "111789"])
+    writer.writerow([1, "Linus Torvalds", "Linux Kernel"])
+    writer.writerow([2, "Tim Berners-Lee", "World Wide Web"])
+    writer.writerow([3, "Guido van Rossum", "Python Programming"])
 #   Sylvester Turner: 46.38% (111789)
 #   Tony Buzbee: 28.78% (69361)
 #   Bill King: 14.01% (33772)

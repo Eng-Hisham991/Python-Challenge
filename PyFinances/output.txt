@@ -1,2 +1,0 @@
-Total_Moths,Total,Average Change,Moth,Greatest Increase in Profits,Month,Greatest Decrease in Profits
-86,38382578,$-2315.12,Feb-2013,$1926159,Sep-2012,$-2196167
